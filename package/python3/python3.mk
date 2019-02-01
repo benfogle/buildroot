@@ -15,7 +15,6 @@ PYTHON3_LICENSE_FILES = LICENSE
 # cross-compiling third-party Python modules.
 
 HOST_PYTHON3_CONF_OPTS += \
-	--without-ensurepip \
 	--without-cxx-main \
 	--disable-sqlite3 \
 	--disable-tk \
@@ -26,8 +25,7 @@ HOST_PYTHON3_CONF_OPTS += \
 	--enable-unicodedata \
 	--disable-test-modules \
 	--disable-idle3 \
-	--disable-ossaudiodev \
-	--disable-openssl
+	--disable-ossaudiodev
 
 # Make sure that LD_LIBRARY_PATH overrides -rpath.
 # This is needed because libpython may be installed at the same time that
@@ -40,7 +38,7 @@ HOST_PYTHON3_CONF_ENV += \
 
 PYTHON3_DEPENDENCIES = host-python3 libffi
 
-HOST_PYTHON3_DEPENDENCIES = host-expat host-zlib host-libffi
+HOST_PYTHON3_DEPENDENCIES = host-expat host-zlib host-libffi host-openssl
 
 PYTHON3_INSTALL_STAGING = YES
 
