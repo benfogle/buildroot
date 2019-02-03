@@ -1,3 +1,12 @@
+******************************************************************************
+* Some minor patches to buildroot to better support crossenv testing.
+* 
+* Major changes:
+*  - enable ssl and ensurepip for host-python3
+*  - Make a default config for qemu-vexpress as
+*    qemu_vexpress_crossenv_defconfig
+******************************************************************************
+
 Buildroot is a simple, efficient and easy-to-use tool to generate embedded
 Linux systems through cross-compilation.
 
